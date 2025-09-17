@@ -5,30 +5,24 @@ public abstract class Account {
     protected float principal;
     protected float rateOfInterest;
 
-    public Account() {
-    }
 
-    public Account(int tenure, float principal) {
-        this.tenure = tenure;
-        this.principal = principal;
-    }
-
-    // Abstract method
+  
     public abstract float calculateInterest();
 
-    // Method to set interest rate
+    
     public void setInterest(int age, String gender) {
-        if (gender.equalsIgnoreCase("Male")) {
+        if (gender.equals("Male")) {
             if (age >= 60) {
-                rateOfInterest = 10.8f;
+            	
+               this. rateOfInterest = 10.8f;
             } else {
-                rateOfInterest = 9.8f;
+                this.rateOfInterest = 9.8f;
             }
-        } else if (gender.equalsIgnoreCase("Female")) {
+        } else if (gender.equals("Female")) {
             if (age >= 58) {
-                rateOfInterest = 10.8f;
+                this.rateOfInterest = 10.8f;
             } else {
-                rateOfInterest = 10.2f;
+                this.rateOfInterest = 10.2f;
             }
         }
     }

@@ -21,13 +21,11 @@ public class BankService {
         try {
             if (validateData(principal, tenure, age, gender)) {
                 RDAccount acc = new RDAccount(tenure, principal);
-
            
                 acc.setInterest(age, gender);
-
               
                 System.out.println("Amount Deposited: " + acc.calculateAmountDeposited());
-                System.out.println("Interest Earned: " + acc.calculateInterest());
+                System.out.println("Interest: " + acc.calculateInterest());
            
             }
         } catch (BankValidationException e) {
