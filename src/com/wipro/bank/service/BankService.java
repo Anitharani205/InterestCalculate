@@ -17,7 +17,7 @@ public class BankService {
     }
 
  
-    public void calculate(float principal, int age, String gender, int tenure) {
+    public void calculate(float principal, int tenure, String gender, int age) {
         try {
             if (validateData(principal, tenure, age, gender)) {
                 RDAccount acc = new RDAccount(tenure, principal);
